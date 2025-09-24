@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero'
 import UpcomingMovies from './components/UpcomingMovies/UpcomingMovies'
 import AOS from "aos"
 import "aos/dist/aos.css"
+import "./i18n"
 
 const App = () => {
   useEffect(() => {

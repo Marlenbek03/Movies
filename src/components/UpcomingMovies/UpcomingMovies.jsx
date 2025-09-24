@@ -52,7 +52,7 @@ const UpcomingMovies = () => {
 
   return (
     <div className="w-[1400px] m-auto">
-      {/* Header & Filters */}
+    
       <div
         className="mb-[48px] mt-[83px] flex flex-col md:flex-row justify-between items-start md:items-center"
         data-aos="fade-up"
@@ -70,7 +70,7 @@ const UpcomingMovies = () => {
           </h2>
         </div>
 
-        {/* Кнопкалар */}
+       
         <div className="flex flex-wrap gap-[15px] mt-[20px] md:mt-0">
           {filters.map((btn) => {
             const isActive = activeFilter === btn
@@ -95,7 +95,7 @@ const UpcomingMovies = () => {
         </div>
       </div>
 
-      {/* Slider */}
+
       {movies.length > 0 ? (
         <Slider {...sliderSettings}>
           {movies.map((movie, index) => (

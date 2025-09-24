@@ -3,8 +3,11 @@ import { FaPlay } from "react-icons/fa6"
 import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+  
   useEffect(() => {
     AOS.init({ duration: 800, once: true })
   }, [])
@@ -21,16 +24,16 @@ const Hero = () => {
     >
       <div className="w-[1400px] m-auto pt-[231px] pb-[155px]">
         <h5 className="text-[#B0DC00] mb-[8px] text-[28px]" data-aos="fade-right">
-          Filmagnet
+          {t("Filmagnet")}
         </h5>
         <h2 className="text-[63px] w-[600px] mb-[7px] text-white" data-aos="fade-left">
-          Unlimited <span className="text-[#B0DC00]"> Entertainment</span>, Movies, TVs shows, & More.
+          {t("Unlimited")} <span className="text-[#B0DC00]"> {t("Entertainment")}</span>, {t("Movies")}, {t("TVs shows")}, {t("& More.")} 
         </h2>
 
         <div className="flex items-center mb-[47px] gap-[20px]" data-aos="fade-up">
-          <button className="bg-[white] p-[2px] rounded-[4px] hover:bg-[#B0DC00]">Movie</button>
-          <span className="border border-[red] px-[5px] text-white">HD</span>
-          <span className="text-white">Action, Drama</span>
+          <button className="bg-[white] p-[2px] rounded-[4px] hover:bg-[#B0DC00]">{t("Movie")}</button>
+          <span className="border border-[red] px-[5px] text-white">{t("HD")}</span>
+          <span className="text-white">{t("Action, Drama")}</span>
           <p className="flex items-center">
             <span className="text-[#B0DC00]"><FaCalendarAlt /></span>
             <span className="text-white ml-1.5"> 2023</span>
@@ -42,7 +45,7 @@ const Hero = () => {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          <FaPlay /> PLAY NOW
+          <FaPlay /> {t("PLAY NOW")}
         </button>
       </div>
     </div>
